@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Radio Button</title>
+    <style>
+      h1 {
+        color: #2c5526;
+        display: flex;
+        justify-content: center;
+        margin: 30px auto;
+      }
+      .box {
+        display: flex;
+        justify-content: space-between;
+        background-color: #ddd;
+        padding: 15px;
+        width: 450px;
+        margin: 0 auto;
+      }
+      .box label {
+        background: #ac0d05;
+        color: #ddd;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .box input {
+        position: fixed;
+        visibility: hidden;
+      }
+      .box input[type="radio"]:checked + label {
+        background: #2c5526;
+        padding: 5px 10px;
+        color: #ddd;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Custom Radio Button</h1>
+    <div class="box">
+      <input type="radio" id="radio_btn" name="btn" checked />
+      <label for="radio_btn">Select</label>
+
+      <input type="radio" id="radio_btn1" name="btn" />
+      <label for="radio_btn1">Select</label>
+
+      <input type="radio" id="radio_btn2" name="btn" />
+      <label for="radio_btn2">Select</label>
+
+      <input type="radio" id="radio_btn3" name="btn" />
+      <label for="radio_btn3">Select</label>
+    </div>
+  </body>
+</html>
