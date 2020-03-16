@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      rel="stylesheet"
+    />
     <title>Custom Radio Button</title>
     <style>
       h1 {
@@ -36,10 +40,39 @@
         color: #ddd;
         border-radius: 5px;
       }
+
+      /* box1 style */
+      .box1 {
+        display: flex;
+        justify-content: space-between;
+        background-color: #ddd;
+        padding: 15px;
+        width: 450px;
+        margin: 0 auto;
+      }
+
+      .box1 label:after {
+        background: #ac0d05;
+        padding: 10px;
+        color: #ddd;
+        border-radius: 5px;
+        content: "\f0c8";
+        font-family: "Font Awesome 5 Free";
+        cursor: pointer;
+        font-size: 24px;
+      }
+      .box1 input {
+        position: fixed;
+        visibility: hidden;
+      }
+      .box1 input[type="radio"]:checked + label:after {
+        content: "\f14a";
+        background: #2c5526;
+      }
     </style>
   </head>
   <body>
-    <h1>Custom Radio Button</h1>
+    <h1>Custom Radio Button Width Label</h1>
     <div class="box">
       <input type="radio" id="radio_btn" name="btn" checked />
       <label for="radio_btn">Select</label>
@@ -53,5 +86,21 @@
       <input type="radio" id="radio_btn3" name="btn" />
       <label for="radio_btn3">Select</label>
     </div>
+    <h1>Custom Radio Button Width Check Box</h1>
+    <div class="box1">
+      <input type="radio" id="check_btn" name="check" checked />
+      <label for="check_btn"></label>
+
+      <input type="radio" id="check_btn1" name="check" />
+      <label for="check_btn1"></label>
+
+      <input type="radio" id="check_btn2" name="check" />
+      <label for="check_btn2"></label>
+
+      <input type="radio" id="check_btn3" name="check" />
+      <label for="check_btn3"></label>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
   </body>
 </html>
