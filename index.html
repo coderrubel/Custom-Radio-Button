@@ -45,7 +45,7 @@
         background: #2c5526;
       }
 
-      /* Custom Radio Button Width Check Box style */
+      /* Custom Radio Button Using Check Box style */
       .box1 label:after {
         background: #ac0d05;
         padding: 10px;
@@ -63,6 +63,15 @@
       .box1 input[type="radio"]:checked + label:after {
         content: "\f14a";
         background: #2c5526;
+      }
+      /* Custom Radio Button Using Bootstrap Style */
+      .custom-control-label::after {
+        width: 30px;
+        height: 30px;
+      }
+      .custom-control-label::before {
+        width: 30px;
+        height: 30px;
       }
     </style>
   </head>
