@@ -7,15 +7,22 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
     <title>Custom Radio Button</title>
     <style>
       h1 {
         color: #2c5526;
         display: flex;
         justify-content: center;
-        margin: 30px auto;
+        font-size: 24px;
+        margin-top: 25px;
       }
-      .box {
+      .box,
+      .box1,
+      .box2 {
         display: flex;
         justify-content: space-between;
         background-color: #ddd;
@@ -39,15 +46,6 @@
       }
 
       /* Custom Radio Button Width Check Box style */
-      .box1 {
-        display: flex;
-        justify-content: space-between;
-        background-color: #ddd;
-        padding: 15px;
-        width: 450px;
-        margin: 0 auto;
-      }
-
       .box1 label:after {
         background: #ac0d05;
         padding: 10px;
@@ -69,7 +67,7 @@
     </style>
   </head>
   <body>
-    <h1>Custom Radio Button Width Label</h1>
+    <h1>Custom Radio Button Using Label</h1>
     <div class="box">
       <input type="radio" id="radio_btn" name="btn" checked />
       <label for="radio_btn">Select</label>
@@ -84,7 +82,7 @@
       <label for="radio_btn3">Select</label>
     </div>
 
-    <h1>Custom Radio Button Width Check Box</h1>
+    <h1>Custom Radio Button Using Check Box</h1>
     <div class="box1">
       <input type="radio" id="check_btn" name="check" checked />
       <label for="check_btn"></label>
@@ -99,6 +97,50 @@
       <label for="check_btn3"></label>
     </div>
 
+    <h1>Custom Radio Button Using Bootstrap</h1>
+    <div class="box2">
+      <div class="custom-control custom-checkbox">
+        <input
+          type="radio"
+          id="BS_btn"
+          name="BS"
+          class="custom-control-input"
+          checked
+        />
+        <label for="BS_btn" class="custom-control-label"></label>
+      </div>
+
+      <div class="custom-control custom-checkbox">
+        <input
+          type="radio"
+          id="BS_btn1"
+          name="BS"
+          class="custom-control-input"
+        />
+        <label for="BS_btn1" class="custom-control-label"></label>
+      </div>
+
+      <div class="custom-control custom-checkbox">
+        <input
+          type="radio"
+          id="BS_btn2"
+          name="BS"
+          class="custom-control-input"
+        />
+        <label for="BS_btn2" class="custom-control-label"></label>
+      </div>
+      <div class="custom-control custom-checkbox">
+        <input
+          type="radio"
+          id="BS_btn3"
+          name="BS"
+          class="custom-control-input"
+        />
+        <label for="BS_btn3" class="custom-control-label"></label>
+      </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   </body>
 </html>
