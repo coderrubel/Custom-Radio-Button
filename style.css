@@ -1,0 +1,210 @@
+h1 {
+    color: #2c5526;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    margin-top: 25px;
+}
+
+.box,
+.box1,
+.box2 {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ddd;
+    padding: 15px;
+    width: 450px;
+    margin: 0 auto;
+}
+
+.box label {
+    background: #ac0d05;
+    color: #ddd;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.box input {
+    position: fixed;
+    visibility: hidden;
+}
+
+.box input[type="radio"]:checked+label {
+    background: #2c5526;
+}
+
+
+/* Custom Radio Button Using Check Box style */
+
+.box1 label:after {
+    background: #ac0d05;
+    padding: 10px;
+    color: #ddd;
+    border-radius: 5px;
+    content: "\f0c8";
+    font-family: "Font Awesome 5 Free";
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.box1 input {
+    position: fixed;
+    visibility: hidden;
+}
+
+.box1 input[type="radio"]:checked+label:after {
+    content: "\f14a";
+    background: #2c5526;
+}
+
+
+/* Custom Radio Button Using Bootstrap Style */
+
+.custom-control-label::after {
+    width: 30px;
+    height: 30px;
+}
+
+.custom-control-label::before {
+    width: 30px;
+    height: 30px;
+}
+
+
+/*custom checkbox, radio button*/
+
+@-webkit-keyframes dothabottomcheck {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 15px;
+    }
+}
+
+@keyframes dothabottomcheck {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 15px;
+    }
+}
+
+@-webkit-keyframes dothatopcheck {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: 36px;
+    }
+}
+
+@keyframes dothatopcheck {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 0;
+    }
+    100% {
+        height: 36px;
+    }
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.check-box {
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: 3px solid #f4590b;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: border-color ease 0.2s;
+    transition: border-color ease 0.2s;
+    cursor: pointer;
+}
+
+.check-box::before,
+.check-box::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    height: 0;
+    width: 6px;
+    background-color: #03bd16;
+    display: inline-block;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    border-radius: 5px;
+    content: " ";
+    -webkit-transition: opacity ease 0.5;
+    transition: opacity ease 0.5;
+}
+
+.check-box::before {
+    top: 21.6px;
+    left: 12.3px;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+.check-box::after {
+    top: 11.1px;
+    left: 1.5px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+input[type="checkbox"]:checked+.check-box,
+.check-box.checked {
+    border-color: #03bd16;
+}
+
+input[type="checkbox"]:checked+.check-box::after,
+.check-box.checked::after {
+    height: 15px;
+    -webkit-animation: dothabottomcheck 0.2s ease 0s forwards;
+    animation: dothabottomcheck 0.2s ease 0s forwards;
+}
+
+input[type="checkbox"]:checked+.check-box::before,
+.check-box.checked::before {
+    height: 36px;
+    -webkit-animation: dothatopcheck 0.4s ease 0s forwards;
+    animation: dothatopcheck 0.4s ease 0s forwards;
+}
+
+input[type="radio"]:checked+.check-box,
+.check-box.checked {
+    border-color: #03bd16;
+}
+
+input[type="radio"]:checked+.check-box::after,
+.check-box.checked::after {
+    height: 15px;
+    -webkit-animation: dothabottomcheck 0.2s ease 0s forwards;
+    animation: dothabottomcheck 0.2s ease 0s forwards;
+}
+
+input[type="radio"]:checked+.check-box::before,
+.check-box.checked::before {
+    height: 36px;
+    -webkit-animation: dothatopcheck 0.4s ease 0s forwards;
+    animation: dothatopcheck 0.4s ease 0s forwards;
+}
+
+input.cb_custom[type="radio"] {
+    visibility: hidden;
+}

@@ -1,155 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css">
     <title>Custom Radio Button</title>
-    <style>
-      h1 {
-        color: #2c5526;
-        display: flex;
-        justify-content: center;
-        font-size: 24px;
-        margin-top: 25px;
-      }
-      .box,
-      .box1,
-      .box2 {
-        display: flex;
-        justify-content: space-between;
-        background-color: #ddd;
-        padding: 15px;
-        width: 450px;
-        margin: 0 auto;
-      }
-      .box label {
-        background: #ac0d05;
-        color: #ddd;
-        padding: 5px 10px;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      .box input {
-        position: fixed;
-        visibility: hidden;
-      }
-      .box input[type="radio"]:checked + label {
-        background: #2c5526;
-      }
+</head>
 
-      /* Custom Radio Button Using Check Box style */
-      .box1 label:after {
-        background: #ac0d05;
-        padding: 10px;
-        color: #ddd;
-        border-radius: 5px;
-        content: "\f0c8";
-        font-family: "Font Awesome 5 Free";
-        cursor: pointer;
-        font-size: 24px;
-      }
-      .box1 input {
-        position: fixed;
-        visibility: hidden;
-      }
-      .box1 input[type="radio"]:checked + label:after {
-        content: "\f14a";
-        background: #2c5526;
-      }
-      /* Custom Radio Button Using Bootstrap Style */
-      .custom-control-label::after {
-        width: 30px;
-        height: 30px;
-      }
-      .custom-control-label::before {
-        width: 30px;
-        height: 30px;
-      }
-    </style>
-  </head>
-  <body>
+<body>
     <h1>Custom Radio Button Using Label</h1>
     <div class="box">
-      <input type="radio" id="radio_btn" name="btn" checked />
-      <label for="radio_btn">Select</label>
+        <input type="radio" id="radio_btn" name="btn" checked />
+        <label for="radio_btn">Select</label>
 
-      <input type="radio" id="radio_btn1" name="btn" />
-      <label for="radio_btn1">Select</label>
+        <input type="radio" id="radio_btn1" name="btn" />
+        <label for="radio_btn1">Select</label>
 
-      <input type="radio" id="radio_btn2" name="btn" />
-      <label for="radio_btn2">Select</label>
+        <input type="radio" id="radio_btn2" name="btn" />
+        <label for="radio_btn2">Select</label>
 
-      <input type="radio" id="radio_btn3" name="btn" />
-      <label for="radio_btn3">Select</label>
+        <input type="radio" id="radio_btn3" name="btn" />
+        <label for="radio_btn3">Select</label>
     </div>
 
-    <h1>Custom Radio Button Using Check Box</h1>
+    <h1>Custom Radio Button Using Font-awesome</h1>
     <div class="box1">
-      <input type="radio" id="check_btn" name="check" checked />
-      <label for="check_btn"></label>
+        <input type="radio" id="check_btn" name="check" checked />
+        <label for="check_btn"></label>
 
-      <input type="radio" id="check_btn1" name="check" />
-      <label for="check_btn1"></label>
+        <input type="radio" id="check_btn1" name="check" />
+        <label for="check_btn1"></label>
 
-      <input type="radio" id="check_btn2" name="check" />
-      <label for="check_btn2"></label>
+        <input type="radio" id="check_btn2" name="check" />
+        <label for="check_btn2"></label>
 
-      <input type="radio" id="check_btn3" name="check" />
-      <label for="check_btn3"></label>
+        <input type="radio" id="check_btn3" name="check" />
+        <label for="check_btn3"></label>
     </div>
 
     <h1>Custom Radio Button Using Bootstrap</h1>
     <div class="box2">
-      <div class="custom-control custom-checkbox">
-        <input
-          type="radio"
-          id="BS_btn"
-          name="BS"
-          class="custom-control-input"
-          checked
-        />
-        <label for="BS_btn" class="custom-control-label"></label>
-      </div>
+        <div class="custom-control custom-checkbox">
+            <input type="radio" id="BS_btn" name="BS" class="custom-control-input" checked />
+            <label for="BS_btn" class="custom-control-label"></label>
+        </div>
 
-      <div class="custom-control custom-checkbox">
-        <input
-          type="radio"
-          id="BS_btn1"
-          name="BS"
-          class="custom-control-input"
-        />
-        <label for="BS_btn1" class="custom-control-label"></label>
-      </div>
+        <div class="custom-control custom-checkbox">
+            <input type="radio" id="BS_btn1" name="BS" class="custom-control-input" />
+            <label for="BS_btn1" class="custom-control-label"></label>
+        </div>
 
-      <div class="custom-control custom-checkbox">
-        <input
-          type="radio"
-          id="BS_btn2"
-          name="BS"
-          class="custom-control-input"
-        />
-        <label for="BS_btn2" class="custom-control-label"></label>
-      </div>
-      <div class="custom-control custom-checkbox">
-        <input
-          type="radio"
-          id="BS_btn3"
-          name="BS"
-          class="custom-control-input"
-        />
-        <label for="BS_btn3" class="custom-control-label"></label>
-      </div>
+        <div class="custom-control custom-checkbox">
+            <input type="radio" id="BS_btn2" name="BS" class="custom-control-input" />
+            <label for="BS_btn2" class="custom-control-label"></label>
+        </div>
+        <div class="custom-control custom-checkbox">
+            <input type="radio" id="BS_btn3" name="BS" class="custom-control-input" />
+            <label for="BS_btn3" class="custom-control-label"></label>
+        </div>
     </div>
 
+    <h1>Custom check-box</h1>
+    <div class="box2">
+        <input type="checkbox" class="cb_custom" id="cbtest" name="agree" value="1">
+        <label for="cbtest" class="check-box"> </label>
+        <input type="checkbox" class="cb_custom" id="cbtest1" name="agree" value="1">
+        <label for="cbtest1" class="check-box"> </label>
+        <input type="checkbox" class="cb_custom" id="cbtest2" name="agree" value="1">
+        <label for="cbtest2" class="check-box"> </label>
+        <input type="checkbox" class="cb_custom" id="cbtest3" name="agree" value="1">
+        <label for="cbtest3" class="check-box"> </label>
+    </div>
+
+    <h1>Custom Radio-Button</h1>
+    <div class="box2">
+        <input type="radio" class="cb_custom" id="btn1" name="btn">
+        <label for="btn1" class="check-box"> </label>
+        <input type="radio" class="cb_custom" id="btn2" name="btn">
+        <label for="btn2" class="check-box"> </label>
+        <input type="radio" class="cb_custom" id="btn3" name="btn">
+        <label for="btn3" class="check-box"> </label>
+        <input type="radio" class="cb_custom" id="btn4" name="btn">
+        <label for="btn4" class="check-box"> </label>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  </body>
+</body>
+
 </html>
